@@ -1,0 +1,21 @@
+{
+    "extends": [
+      "config:base"
+    ],
+    "packageRules": [{
+      "matchDatasources": [
+        "terraform-module",
+        "terraform-provider"
+      ],
+      "postUpgradeTasks": {
+        "commands": [
+          "/tf-docs/tf-docs.sh"
+        ],
+        "executionMode": "branch",
+        "fileFilters": [
+          "**/*.tf",
+          "README.md"
+        ]
+      }
+    }]
+}
