@@ -1,8 +1,21 @@
 {
     "extends": [
-      "config:base"
+      "config:base",
+      ":rebaseStalePrs"
     ],
     "semanticCommits": "enabled",
+    "java": {
+      "enabled": false
+    },
+    "js": {
+      "enabled": false
+    },
+    "python": {
+      "enabled": false
+    },
+    "node": {
+      "enabled": false
+    },
     "packageRules": [{
       "matchDatasources": [
         "terraform-module",
